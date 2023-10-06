@@ -1,50 +1,55 @@
-/* Stilark til hjemmesiden */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f2f2;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#filter {
+    display: flex;
+    align-items: center;
+}
+
+#filter label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#filter select {
+    padding: 5px;
 }
 
 main {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+h2 {
+    margin-top: 0;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-/* Stil til fødselsdagsliste */
-ul {
-    list-style: none;
+#birthdayList {
+    list-style-type: none;
     padding: 0;
 }
 
-li {
+#birthdayList li {
     margin-bottom: 10px;
-}
-
-/* Stil til datofelt */
-#current-date {
-    font-size: 18px;
-    font-weight: bold;
 }
