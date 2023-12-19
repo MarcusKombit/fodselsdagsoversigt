@@ -18,8 +18,7 @@ const employees = [
     { name: "Rune Mikkel Jensen", birthday: "02-13", project: "TMB" },
     { name: "Jens Kastenskov", birthday: "10-17", project: "TMB" },
     { name: "Simone Andersen", birthday: "07-06", project: "TMB" },
-    { name: "Bente Marie Elstrøm Jørgensen", birthday: "05-24", project: "TMB" },
-    { name: "Bente Marie Elstrøm Jørgensen", birthday: "12-19", project: "TMB" }
+    { name: "Bente Marie Elstrøm Jørgensen", birthday: "05-24", project: "TMB" }
     // Tilføj flere medarbejdere her
 ];
 
