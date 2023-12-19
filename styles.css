@@ -2,7 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-image: url('theme1_upscaled.jpg'); /* Replace 'your-image.jpg' with the actual path or URL of your image */
+    background-size: cover; /* This property scales the image to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed as the page scrolls */
+    background-position: center center; /* Centers the image both horizontally and vertically */
+    background-color: #f2f2f2; /* A fallback background color in case the image doesn't load or cover the entire viewport */
 }
 
 header {
@@ -39,6 +44,17 @@ main {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#upcoming {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
@@ -52,4 +68,19 @@ h2 {
 
 #birthdayList li {
     margin-bottom: 10px;
+}
+
+/* Styling for the date within the h2 element */
+#dateDisplay {
+    display: inline-block; /* Make the date inline */
+    margin-left: 5px; /* Add spacing between "I dag er det:" and the date */
+    font-size: 30px;
+}
+
+.birthday-name {
+    margin: 1px 0; /* Justér dette efter behov for mere eller mindre afstand */
+}
+
+.birthday-heading {
+    font-size: 20px; /* Juster størrelsen på 'Følgende kollager har fødselsdag i dag' */
 }

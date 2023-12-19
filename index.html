@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Fødselsdagskalender</title>
+
 </head>
 <body>
     <header>
-        <h1>Fødselsdagskalender</h1>
+        <h1>KOMBITs fødselsdagskalender</h1>
         <div id="filter">
-            <label for="projectFilter">Filtrer efter projekt:</label>
+            <label for="projectFilter">Filtrer efter afdeling:</label>
             <select id="projectFilter">
                 <option value="alle">Alle</option>
-                <option value="projekt1">Projekt 1</option>
-                <option value="projekt2">Projekt 2</option>
-                <option value="projekt3">Projekt 3</option>
-                <option value="projekt4">Projekt 4</option>
-                <!-- Tilføj flere projektindstillinger her -->
+                <option value="TMB">TMB</option>
+                <!-- Tilføj flere afdelinger her -->
             </select>
         </div>
     </header>
     <main>
         <div id="currentDate">
-            <h2>I dag er det:</h2>
-            <p id="dateDisplay"></p>
+            <h2><p id="dateDisplay"></p></h2>
             <p id="birthdayDisplay"></p>
-            <img id="birthdayGif" src="" alt="fødselsdagegif.gif">
+            <img id="birthdayGif" src="Fødselsdagsgif.gif" alt="Fødselsdagsgif.gif">
         </div>
+    </main>
+
+    <div id="upcoming">
         <div id="upcomingBirthdays">
-            <h2>Kommende fødselsdage:</h2>
+            <h2>Kommende fødselsdage</h2>
             <ul id="birthdayList">
                 <!-- Dynamisk genererede fødselsdage vises her -->
             </ul>
         </div>
-    </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
