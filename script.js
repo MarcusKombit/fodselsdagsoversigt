@@ -18,7 +18,8 @@ const employees = [
     { name: "Rune Mikkel Jensen", birthday: "02-13", project: "TMB" },
     { name: "Jens Kastenskov", birthday: "10-17", project: "TMB" },
     { name: "Simone Andersen", birthday: "07-06", project: "TMB" },
-    { name: "Bente Marie Elstrøm Jørgensen", birthday: "05-24", project: "TMB" }
+    { name: "Bente Marie Elstrøm Jørgensen", birthday: "05-24", project: "TMB" },
+    { name: "Bente Marie Elstrøm Jørgensen", birthday: "12-19", project: "TMB" }
     // Tilføj flere medarbejdere her
 ];
 
@@ -53,7 +54,7 @@ function showBirthdaysToday() {
         const birthdayText = `Følgende kollegaer har fødselsdag i dag:<br>${names.join("<br>")}`;
         document.getElementById("birthdayDisplay").innerHTML = birthdayText;
     } else {
-        document.getElementById("birthdayDisplay").textContent = "Ingen fødselsdag i dag. Hold øje med kommende fødselsdage nedenfor.";
+        document.getElementById("birthdayDisplay").textContent = "Ingen fødselsdag i dag. Hold øje med kommende fødselsdage nedenfor!";
     }
 }
 
@@ -76,8 +77,8 @@ function showBirthdaysTodayByProject() {
     if (filteredEmployees.length > 0) {
         const names = filteredEmployees.map(employee => employee.name);
         const projectText =
-            selectedProject === "alle" ? "" : ` (${selectedProject})`;
-            const birthdayText = `<p class="birthday-heading">Følgende kollegaer har fødselsdag i dag${projectText}:</p><br><br>`;
+            selectedProject === "alle" ? "" : ` i ${selectedProject}`;
+            const birthdayText = `<p class="birthday-heading">Følgende kollegaer${projectText} har fødselsdag i dag:</p><br><br>`;
         
         const nameList = names.map(name => `<p class="birthday-name">${name}</p>`).join("<br>");
         
@@ -87,7 +88,7 @@ function showBirthdaysTodayByProject() {
         document.getElementById("birthdayDisplay").textContent =
             selectedProject === "alle"
                 ? "Ingen kollegaer har fødselsdag i dag. Hold øje med kommende fødselsdage nedenfor!"
-                : `Ingen fødselsdag i dag for ${selectedProject}.`;
+                : `Ingen i ${selectedProject} har fødselsdag i dag.`;
         birthdayGif.src = "arrow1.gif"; // Skjul GIF'en, hvis der ikke er fødselsdag i dag
     }
 }
@@ -96,7 +97,7 @@ function showBirthdaysTodayByProject() {
 function showUpcomingBirthdaysByProject() {
     const selectedProject = projectFilter.value;
     const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() + 1); // Gå til næste dag
+    currentDate.setDate(currentDate.getDate()); // Gå til næste dag
     const oneWeekLater = new Date();
     oneWeekLater.setDate(currentDate.getDate() + 7);
 
@@ -124,8 +125,8 @@ function showUpcomingBirthdaysByProject() {
         const listItem = document.createElement("li");
         listItem.textContent =
             selectedProject === "alle"
-                ? "Ingen kommende fødselsdage inden for en uge."
-                : `Ingen kommende fødselsdage for ${selectedProject} inden for den næste uge.`;
+                ? "Ingen kommende fødselsdage inden for den næste uge."
+                : `Ingen kommende fødselsdage i ${selectedProject} inden for den næste uge.`;
         birthdayList.appendChild(listItem);
     }
 }

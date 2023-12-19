@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('theme1_upscaled.jpg'); /* Replace 'your-image.jpg' with the actual path or URL of your image */
+    background-image: url('theme2_upscaled.jpg'); /* Replace 'your-image.jpg' with the actual path or URL of your image */
     background-size: cover; /* This property scales the image to cover the entire viewport */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the background image fixed as the page scrolls */
